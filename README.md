@@ -11,7 +11,7 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **02** | `let` Keyword | 1 | Block-scoped variables, loops |
 | **03** | Identifiers & Comments | 4 | Naming rules, conventions (camelCase, PascalCase, snake_case, SCREAMING_SNAKE_CASE, Hungarian Notation), single/multi-line/JSDoc comments, interview Q&A |
 | **04** | Literals | 6 | String, boolean, numeric literals; `null` vs `undefined`; decimal/binary/octal/hex; floating-point; BigInt; `NaN`, `Infinity` |
-| **05** | Operators | 19 | Assignment, arithmetic, comparison (coercion gotchas), logical, string, ternary (including nested), `typeof`, interview-style IQ exercises |
+| **05** | Operators | 19 | Assignment, arithmetic, comparison (coercion gotchas), logical, string, ternary (single & nested), `typeof`, interview-style IQ exercises |
 
 ## 🚀 How to Use
 
@@ -54,8 +54,9 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Comparison**: `==` vs `===`, `!=` vs `!==`, `<`, `>`, with type coercion gotchas
 - **Logical**: `&&`, `||`, `!`
 - **String**: concatenation with `+`
-- **Ternary/Conditional**: single and nested ternaries
-- **Real-world IQs**: HTTP status categorization, temperature checks, CI headless mode, environment URLs, SLA validation
+- **Ternary/Conditional**: single ternaries (`22_Ternary.js`)
+- **Nested Ternary**: multi-condition nested ternary (`28_Nested_Terny_Op.js`)
+- **Interview Questions (IQ)**: HTTP status categorization, temperature checks, CI headless mode, environment URLs, SLA validation — covering basic (`23_IQ.js`, `24.IQ2.js`, `25_IQ3.js`, `26_IQ4.js`, `27.IQ5.js`) and nested ternary IQs (`29_IQ_NT.js`, `30_NT_IQ2.js`)
 - **`typeof` operator**: including array/`null` quirks
 
 ## ⚙️ Prerequisites
