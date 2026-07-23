@@ -13,6 +13,8 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **04** | Literals | 6 | String, boolean, numeric literals; `null` vs `undefined`; decimal/binary/octal/hex; floating-point; BigInt; `NaN`, `Infinity` |
 | **05** | Operators | 24 | Assignment, arithmetic, comparison (coercion gotchas), logical, string, ternary (single & nested), `typeof`, increment/decrement, nullish coalescing (`??`), interview-style IQ exercises |
 | **06** | Statements | 3 | `if/else` conditional logic, nested `if/else`, multiple conditions (grading system) |
+| **07** | Switch | 9 | `switch` statement basics, strict (`===`) comparison, switch grouping, real-world API status codes, interview-style IQ exercises |
+| **08** | User Input | 4 | `readline` / `process.stdin`, Node.js UI interaction, `prompt()` in browser, `fs.readFileSync(0)` for stdin |
 
 ## 🚀 How to Use
 
@@ -49,7 +51,7 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Special values**: `Infinity`, `-Infinity`, `NaN`, `null` vs `undefined` quirks
 - The famous `typeof null === "object"` historical bug
 
-### 05 — Operators *(largest chapter — 19 files)*
+### 05 — Operators *(largest chapter — 24 files)*
 - **Assignment**: `=`, `+=`, `-=`, `*=`, `/=`, `%=`
 - **Arithmetic**: `+`, `-`, `*`, `/`, `%`, `**`
 - **Comparison**: `==` vs `===`, `!=` vs `!==`, `<`, `>`, with type coercion gotchas
@@ -66,6 +68,19 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Basic `if/else`**: age check example (`37_IQ.js`)
 - **Nested `if/else`**: age + drinking eligibility check (`38_IQ2.js`)
 - **Multiple Conditions**: grade classification with `if/else if/else` using `&&` (`38_Multiple_Condition,JS`)
+
+### 07 — Switch
+- **`switch` basics**: block-scoped variables inside `case` blocks (`39_Switch.js`)
+- **Strict comparison**: `switch` uses `===`, not `==` — `0` vs `false` gotcha (`40_IQ.js`)
+- **Interview Questions**: switch-based logic exercises (`41_IQ2.js` through `47_IQ4.js`)
+- **Real-world API testing**: mapping status codes to descriptive messages (`42_REAL_API_Testing.js`)
+- **Switch grouping**: multiple `case` values mapping to the same output (`43_Switch_Group.js`)
+
+### 08 — User Input
+- **Node.js stdin**: reading user input via `process.stdin` / `readline` (`48_JS.js`)
+- **Browser prompt**: using `prompt()` for browser-based UI interaction (`49_Node_UI.js`)
+- **Interactive prompts**: accepting and processing user-provided values (`50_Prompt.js`)
+- **`fs` stdin**: reading input synchronously with `fs.readFileSync(0, 'utf8')` + Ctrl+D (`51_Fs.js`)
 
 ## ⚙️ Prerequisites
 
