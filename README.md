@@ -15,6 +15,7 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **06** | Statements | 3 | `if/else` conditional logic, nested `if/else`, multiple conditions (grading system) |
 | **07** | Switch | 9 | `switch` statement basics, strict (`===`) comparison, switch grouping, real-world API status codes, interview-style IQ exercises |
 | **08** | User Input | 4 | `readline` / `process.stdin`, Node.js UI interaction, `prompt()` in browser, `fs.readFileSync(0)` for stdin |
+| **HK** | HackerRank | 1 | HackerRank-style problem setup with `processData` and stdin/stdout boilerplate |
 
 ## 🚀 How to Use
 
@@ -81,6 +82,9 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Browser prompt**: using `prompt()` for browser-based UI interaction (`49_Node_UI.js`)
 - **Interactive prompts**: accepting and processing user-provided values (`50_Prompt.js`)
 - **`fs` stdin**: reading input synchronously with `fs.readFileSync(0, 'utf8')` + Ctrl+D (`51_Fs.js`)
+
+### HackerRank
+- **Hello World**: HackerRank problem boilerplate with `processData()` function, stdin accumulation, and `process.stdin.on("end")` trigger (`Hello_World.js`)
 
 ## ⚙️ Prerequisites
 
