@@ -15,7 +15,8 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **06** | Statements | 3 | `if/else` conditional logic, nested `if/else`, multiple conditions (grading system) |
 | **07** | Switch | 9 | `switch` statement basics, strict (`===`) comparison, switch grouping, real-world API status codes, interview-style IQ exercises |
 | **08** | User Input | 4 | `readline` / `process.stdin`, Node.js UI interaction, `prompt()` in browser, `fs.readFileSync(0)` for stdin |
-| **HK** | HackerRank | 1 | HackerRank-style problem setup with `processData` and stdin/stdout boilerplate |
+| **09** | Loops | 4 | `for` loop basics, increment/decrement in loops, loop condition ranges (`<` vs `<=`), odd/even checks |
+| **HK** | HackerRank | 3 | HackerRank-style problem setup with `processData` and stdin/stdout boilerplate |
 
 ## 🚀 How to Use
 
@@ -83,8 +84,16 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Interactive prompts**: accepting and processing user-provided values (`50_Prompt.js`)
 - **`fs` stdin**: reading input synchronously with `fs.readFileSync(0, 'utf8')` + Ctrl+D (`51_Fs.js`)
 
+### 09 — Loops
+- **Motivation**: why loops exist — printing numbers 1–10 without repetition (`52_Loops.js`)
+- **`for` loop basics**: INIT / CONDITION / INCREMENT structure, printing 0–9, odd/even detection with `if/else` inside the loop (`53_For_Loop.js`)
+- **Increment in loops**: prefix (`++a`) vs postfix (`a++`) recap with an expression table (`54_Increment.js`)
+- **Loop condition ranges**: comparing `i < 10`, `i <= 10`, and `i = 1` start values with a `somya` counter variable (`55_For_Loops.js`)
+
 ### HackerRank
 - **Hello World**: HackerRank problem boilerplate with `processData()` function, stdin accumulation, and `process.stdin.on("end")` trigger (`Hello_World.js`)
+- **If/Else Statement**: empty problem skeleton for the HackerRank if/else challenge (`If_Else_Statement.js`)
+- **Print The Input**: `processData` that echoes the raw stdin input back to stdout (`Print_The_Input.js`)
 
 ## ⚙️ Prerequisites
 
