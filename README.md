@@ -16,7 +16,8 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **07** | Switch | 9 | `switch` statement basics, strict (`===`) comparison, switch grouping, real-world API status codes, interview-style IQ exercises |
 | **08** | User Input | 4 | `readline` / `process.stdin`, Node.js UI interaction, `prompt()` in browser, `fs.readFileSync(0)` for stdin |
 | **09** | Loops | 12 | `for` loop basics, `while` / `do-while` loops, `break` to exit, `while(true)` infinite loops, nested `for` loops, loop condition ranges |
-| **10** | Arrays | 9 | Array literals & constructors, `at()`, `push`/`pop`/`shift`/`unshift`/`splice`, searching (`indexOf`, `includes`, `find`), iteration (`for...of`, `forEach`, `entries`) |
+| **10** | Arrays | 16 | Array literals & constructors, `at()`, `push`/`pop`/`shift`/`unshift`/`splice`, searching (`indexOf`, `includes`, `find`), iteration (`for...of`, `forEach`, `entries`), `map`/`filter`, sorting, slicing, destructuring |
+| **11** | Functions | 12 | Function types (param/return combos), arrow functions, function expressions, template literals, IIFE, real-world examples |
 | **HK** | HackerRank | 3 | HackerRank-style problem setup with `processData` and stdin/stdout boilerplate |
 
 ## 🚀 How to Use
@@ -109,6 +110,27 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Searching**: `indexOf`, `lastIndexOf`, `includes` (`70_Array_Searching.js`)
 - **IQ**: `find`, `findIndex`, `findLast`, `findLastIndex` for first/last matches (`71_IQ.js`)
 - **Iteration**: classic `for`, `for...of` (values), `forEach`, `entries()` (index + value), `for...in` (keys) (`72_Array_Iterate.js`)
+- **Transform**: `map` (same-size transform) and `filter` (keep matching items) (`73_Array_Transform.js`)
+- **Sorting**: default lexicographic sort, numeric sort with comparator `(a,b) => a-b` / `b-a`, `reverse()` (`74_Sorting.js`)
+- **Slicing**: `slice(start, end)` returns a new array without mutating, negative indexes (`75_Slicing.js`)
+- **Concat & join**: `concat()`, spread `[...a, ...b]`, `join(" | ")` to string (`76_Array_Concat.js`)
+- **Checking**: `Array.isArray`, `every` (all pass), `some` (at least one passes), ASI gotcha (`77_Array_Checking.js`)
+- **Copying**: shallow copies via spread/`slice`/`Array.from`/`concat` vs reference alias (`78_Copy.js`)
+- **Destructuring**: array destructuring, rest pattern `...rest`, default values, skipping holes, swapping without temp (`79_Destructuring.js`)
+
+### 11 — Functions
+- **Why functions**: avoiding repeated logic — a `getResult(score)` pass/fail helper (`78.Fn.js`)
+- **Parameters**: `sayHello(name)` called with different names (`79_Fn.js`)
+- **Type 1**: no params, no return — implicitly returns `undefined` (`80_Type1_Basic_Fn.js`)
+- **Type 2**: params, no return — `greetByName(name)` (`81_Type2_Basic_Fn.js`)
+- **Type 3**: no params, with return — returning strings and arrays (`82_Type3_Basic_Fn.js`)
+- **Type 4**: params + return — `sumOfTwoNumbers(a, b)` (`83_Type4_Basic.Fn.js`)
+- **Template literals**: placeholder file (`84_Template_Literal.js`)
+- **Function expressions**: placeholder file (`85_Fn_Exp.js`)
+- **Arrow functions**: placeholder file (`86_Fn_Arrow.js`)
+- **Arrow functions**: concise `=>` syntax, no-param arrows, multi-line arrow with `if/else` (`87_Fn_Arrow.js`)
+- **Real-world example**: placeholder file (`88_REAL.js`)
+- **IIFE**: Immediately Invoked Function Expression — anonymous and arrow functions that run the moment they're defined (`89_Fn_IIFE.js`)
 
 ### HackerRank
 - **Hello World**: HackerRank problem boilerplate with `processData()` function, stdin accumulation, and `process.stdin.on("end")` trigger (`Hello_World.js`)
