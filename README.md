@@ -140,14 +140,14 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Deep-dive notes**: markdown reference covering hoisting, TDZ, spread & rest, `var`/`let`/`const`, plus interview Q&A and a practice checklist (`102_Hoisting_TDZ.md`)
 
 ### 12 — Fn Closure
-- **Scope**: placeholder for scope discussion (`104_Scope_Fn.js`)
+- **Scope**: global vs local scope, inner functions can access outer variables but not vice-versa (`104_Scope_Fn.js`)
 - **Closure basics**: an inner function (`installBrowser`) capturing `name` from its outer function — `startBrowser()` returns the inner function, which still remembers `name` after the outer call finished (`105_Closure.js`)
 - **Closures remember**: `makeCounter()` returns an object of functions sharing one private `count` — increment/decrement/get keep updating the same value across calls (`106_Closure_Remembers.js`)
 - **Real-world retry tracker**: `maxRetryTRacker(max)` returns a `tryAgain(testName)` that counts attempts and stops after `max` — Playwright-style retry logic (`107_Fn_Closure_REAL.js`)
 - **Rate limiter**: `makeRateLimiter(limit)` returns a `check()` that only lets the first `limit` calls through (`108_Fn_Simple.js`)
 
 ### 13 — Strings
-- **String basics**: placeholder file (`109_String.js`)
+- **String basics**: single/double quotes, template literals with `${}` expressions, multiline strings, `String()` conversion (`109_String.js`)
 - **Properties & access**: `.length`, bracket indexing `str[0]`, `.at(-1)` negative indexing, `charAt()`, `charCodeAt()` (ASCII — `A` is 65) (`110_String_Fn.js`)
 - **Searching & checking**: `includes()`, `startsWith()` / `endsWith()`, `indexOf()` / `lastIndexOf()` on a real API login URL (`111_Str_Searching.js`)
 
