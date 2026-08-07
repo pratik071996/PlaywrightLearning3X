@@ -18,6 +18,8 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **09** | Loops | 12 | `for` loop basics, `while` / `do-while` loops, `break` to exit, `while(true)` infinite loops, nested `for` loops, loop condition ranges |
 | **10** | Arrays | 16 | Array literals & constructors, `at()`, `push`/`pop`/`shift`/`unshift`/`splice`, searching (`indexOf`, `includes`, `find`), iteration (`for...of`, `forEach`, `entries`), `map`/`filter`, sorting, slicing, destructuring |
 | **11** | Functions | 12 | Function types (param/return combos), arrow functions, function expressions, template literals, IIFE, real-world examples |
+| **12** | Fn Closure | 5 | Scope, closures, counters, retry/rate-limit trackers |
+| **13** | Strings | 3 | String properties, `charAt`/`charCodeAt`, searching with `includes`/`startsWith`/`indexOf` |
 | **HK** | HackerRank | 3 | HackerRank-style problem setup with `processData` and stdin/stdout boilerplate |
 
 ## 🚀 How to Use
@@ -131,6 +133,23 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Arrow functions**: concise `=>` syntax, no-param arrows, multi-line arrow with `if/else` (`87_Fn_Arrow.js`)
 - **Real-world example**: placeholder file (`88_REAL.js`)
 - **IIFE**: Immediately Invoked Function Expression — anonymous and arrow functions that run the moment they're defined (`89_Fn_IIFE.js`)
+- **Spread & rest**: `...` unpacks an array when *calling* a function, packs arguments into an array when *declaring* — `hasError(...codes)` HTTP-code check (`90_Spread_Fn.js`)
+- **`var` vs `let` vs `const`**: function scope vs block scope, re-declaration/re-assignment rules, `const` array mutation (`92_Var_Let_Const.js`)
+- **Hoisting**: the two-phase mental model (memory creation → execution), `var` → `undefined`, function declarations hoisted with their body, arrow/function expressions not hoisted (`93.Hoisting.js`, `94_Var_Hoisting.js`, `95_Function_Hoisting.js`)
+- **TDZ (Temporal Dead Zone)**: `let`/`const` exist but hold no value until their line runs — touching them throws `ReferenceError`; `typeof` also throws inside the TDZ (`96_Let_Hoisting.js`, `97_Var_TDZ.js`, `98_TDZ.js`, `101_Const_TDZ.js`)
+- **Deep-dive notes**: markdown reference covering hoisting, TDZ, spread & rest, `var`/`let`/`const`, plus interview Q&A and a practice checklist (`102_Hoisting_TDZ.md`)
+
+### 12 — Fn Closure
+- **Scope**: placeholder for scope discussion (`104_Scope_Fn.js`)
+- **Closure basics**: an inner function (`installBrowser`) capturing `name` from its outer function — `startBrowser()` returns the inner function, which still remembers `name` after the outer call finished (`105_Closure.js`)
+- **Closures remember**: `makeCounter()` returns an object of functions sharing one private `count` — increment/decrement/get keep updating the same value across calls (`106_Closure_Remembers.js`)
+- **Real-world retry tracker**: `maxRetryTRacker(max)` returns a `tryAgain(testName)` that counts attempts and stops after `max` — Playwright-style retry logic (`107_Fn_Closure_REAL.js`)
+- **Rate limiter**: `makeRateLimiter(limit)` returns a `check()` that only lets the first `limit` calls through (`108_Fn_Simple.js`)
+
+### 13 — Strings
+- **String basics**: placeholder file (`109_String.js`)
+- **Properties & access**: `.length`, bracket indexing `str[0]`, `.at(-1)` negative indexing, `charAt()`, `charCodeAt()` (ASCII — `A` is 65) (`110_String_Fn.js`)
+- **Searching & checking**: `includes()`, `startsWith()` / `endsWith()`, `indexOf()` / `lastIndexOf()` on a real API login URL (`111_Str_Searching.js`)
 
 ### HackerRank
 - **Hello World**: HackerRank problem boilerplate with `processData()` function, stdin accumulation, and `process.stdin.on("end")` trigger (`Hello_World.js`)
