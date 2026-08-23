@@ -19,7 +19,12 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **10** | Arrays | 16 | Array literals & constructors, `at()`, `push`/`pop`/`shift`/`unshift`/`splice`, searching (`indexOf`, `includes`, `find`), iteration (`for...of`, `forEach`, `entries`), `map`/`filter`, sorting, slicing, destructuring |
 | **11** | Functions | 12 | Function types (param/return combos), arrow functions, function expressions, template literals, IIFE, real-world examples |
 | **12** | Fn Closure | 5 | Scope, closures, counters, retry/rate-limit trackers |
-| **13** | Strings | 3 | String properties, `charAt`/`charCodeAt`, searching with `includes`/`startsWith`/`indexOf` |
+| **13** | Strings | 8 | String basics, properties, searching, extraction, case/trim/replace, split/join, conversion, complete cheatsheet |
+| **14** | Objects | 6 | Object literals, dot/bracket access, references vs values, JSON-style keys, config mutation, big real-world fixture |
+| **15** | Multi-Dim Arrays | 6 | 2D grids, nested loops, `for...of`, `forEach`, `map`+`reduce` row sums, star/pyramid patterns |
+| **16** | Callbacks | 8 | Callback basics, sync vs async callbacks, callback hell, error-first pattern, `calculate` with function args |
+| **17** | Promise | 10 | Promise states, `.then`/`.catch`/`.finally`, promise chaining, `all`/`allSettled`/`race`, IQ exercises |
+| **18** | Async/Await | 9 | `async`/`await` basics, sequential vs parallel execution, retry pattern for flaky APIs, Playwright spec, IQ |
 | **HK** | HackerRank | 3 | HackerRank-style problem setup with `processData` and stdin/stdout boilerplate |
 
 ## 🚀 How to Use
@@ -150,6 +155,57 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **String basics**: single/double quotes, template literals with `${}` expressions, multiline strings, `String()` conversion (`109_String.js`)
 - **Properties & access**: `.length`, bracket indexing `str[0]`, `.at(-1)` negative indexing, `charAt()`, `charCodeAt()` (ASCII — `A` is 65) (`110_String_Fn.js`)
 - **Searching & checking**: `includes()`, `startsWith()` / `endsWith()`, `indexOf()` / `lastIndexOf()` on a real API login URL (`111_Str_Searching.js`)
+- **Extraction**: `slice()` with negative indexes vs `substring()` (no negatives, clamps to 0) (`112_Extraction_String.js`)
+- **Case, trim & replace**: `toUpperCase()` / `toLowerCase()`, `trim()` / `trimStart()` / `trimEnd()`, `replace()` (first only) vs `replaceAll()` vs regex `/g` (`113_String_More.js`)
+- **Split & join**: `split()` by separator, `split("")` per character, regex replace, `join()` to build strings (`114_Extra.js`)
+- **Conversion & immutability**: `toString()`, `Number()`, `parseInt()` / `parseFloat()`, and why `str[0] = "H"` silently does nothing (`115_Fn_String_Conversion.js`)
+- **Cheatsheet**: complete string methods reference — every method, gotchas, and SDET recipes (`String_Cheatsheet.md`)
+
+### 14 — Objects
+- **Basics**: object literals, dot vs bracket access, case-sensitive keys, and reference copying `let b = a` (`116_Objects.js`)
+- **Real-world fixture**: a deep nested user object (address, education, employment, family, bank, login history) with methods using `this` (`117.Object_Person.js`)
+- **Object methods**: shorthand `printName()` with `this.name` (`118_Objects.js`)
+- **CRUD on objects**: access, add, and modify properties (`user.city = "NYC"`) (`119_Objects.js`)
+- **Config pattern**: build a Playwright-style config object, mutate values, `delete` a key (`120_Config.js`)
+- **Call by value vs reference**: primitives copy the value; objects copy the reference — mutating `obj2` changes `obj1` (`121_CallBy_Ref_CallByValue.js`)
+
+### 15 — Multi-Dim Arrays
+- **2D grid basics**: array of arrays, nested `for` loops printing a grid (`122_Array.js`)
+- **Access & mutate**: `grid[0][0]`, `.length` of rows/columns, edit cells, iterate with `for` / `for...of` / `forEach` over a test-matrix (`123_Array.js`)
+- **Row transforms**: `map` + `reduce` to sum each student's scores; scan a suite-results matrix for failing tests (`124_Array_Fn.js`)
+- **Right triangle pattern**: nested loops printing `*` with increasing columns (`125_Right_Pattern.js`)
+- **Left/inverted triangle pattern**: `*` with decreasing columns (`126_Left_Hand.js`)
+- **Pyramid pattern**: spaces + odd-count stars (`127_Pyramid_Pattern.js`)
+
+### 16 — Callbacks
+- **Callback basics**: pass a function as an argument — named function, anonymous function, arrow function (`128_Callback.js`)
+- **Callback as parameter**: `test("...", callback)` and a story-based example (`129_Callback.js`)
+- **Sync callbacks**: `forEach` runs all iterations synchronously — "All done" prints last (`130_Sync_Callback.js`)
+- **Async callbacks**: `setTimeout` fires later, non-blocking (`131_Async_Callback.js`)
+- **Callback hell**: nested callbacks for an E2E login flow (`132_CallbackHell.js`)
+- **Real-world callback hell**: a deep login → profile → orders → payment → email chain (`133_Call_RealHello.js`)
+- **Returning from callbacks**: `calculate(a, b, operation)` returns the callback's result (`134_Call_Return.js`)
+- **Step pyramid**: chained step functions (`135_Pyramid_DOM.js`)
+
+### 17 — Promise
+- **Basics**: `new Promise((resolve, reject))`, the pending state, resolve vs reject (`136_Promise.js`)
+- **Real API**: `.then()` runs only on resolve (`137_REAL_Promise_API.js`)
+- **Error handling**: `.catch()` runs only on reject, `.then()` is skipped (`138_REAL_Promise_API.js`)
+- **`.finally()`**: always executes, on both success and failure (`139_Promise_Finally.js`)
+- **Promise chaining**: an E2E login flow step-by-step with `.then().catch().finally()` (`140_Promise_REAL.js`)
+- **`Promise.all`**: fails fast — one rejection rejects the whole batch (`141_Promise_All.js`)
+- **`Promise.allSettled`**: waits for all, reports each as fulfilled/rejected like a test report (`142_Promise_Settle.js`)
+- **`Promise.race`**: first settled promise wins (fastest server) (`143_Promise_Race.js`)
+- **IQ exercises**: resolve/reject, chaining, throwing, finally (`144_Promise_IQ.js`, `145_IQ.js`)
+
+### 18 — Async/Await
+- **Async basics**: `async` functions and `await` (`146_Async.js`, `148_AA.js`)
+- **Better way**: rewriting a `.then()` chain as `await` steps — the login flow (`147_BetterWay.js`)
+- **Playwright spec**: `await` inside a real `@playwright/test` spec (`149_Example_Spec.ts`)
+- **Sequential execution**: awaiting one API at a time — slow (~3s) but ordered (`151_Seq_Eexecution.js`)
+- **Parallel execution**: `Promise.all` fires all APIs at once (~1s) (`152_Parall_Execution.js`)
+- **Flaky API retry**: retry-with-backoff pattern for flaky APIs using async/await (`153_API_Flaky.js`)
+- **IQ exercise**: order of execution — `console.log("A")` … what prints when? (`154_IQ.js`)
 
 ### HackerRank
 - **Hello World**: HackerRank problem boilerplate with `processData()` function, stdin accumulation, and `process.stdin.on("end")` trigger (`Hello_World.js`)
