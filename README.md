@@ -25,6 +25,7 @@ A hands-on, beginner-to-intermediate JavaScript fundamentals tutorial structured
 | **16** | Callbacks | 8 | Callback basics, sync vs async callbacks, callback hell, error-first pattern, `calculate` with function args |
 | **17** | Promise | 10 | Promise states, `.then`/`.catch`/`.finally`, promise chaining, `all`/`allSettled`/`race`, IQ exercises |
 | **18** | Async/Await | 9 | `async`/`await` basics, sequential vs parallel execution, retry pattern for flaky APIs, Playwright spec, IQ |
+| **19** | Classes (OOP) | 6 | Class syntax, constructors, `this`, `extends`/`super`, static & private (`#`) members, getters/setters, Page Object Model, complete cheatsheet |
 | **HK** | HackerRank | 3 | HackerRank-style problem setup with `processData` and stdin/stdout boilerplate |
 
 ## 🚀 How to Use
@@ -206,6 +207,15 @@ Introduces **block-scoped variable declaration** with `let`, including usage ins
 - **Parallel execution**: `Promise.all` fires all APIs at once (~1s) (`152_Parall_Execution.js`)
 - **Flaky API retry**: retry-with-backoff pattern for flaky APIs using async/await (`153_API_Flaky.js`)
 - **IQ exercise**: order of execution — `console.log("A")` … what prints when? (`154_IQ.js`)
+
+### 19 — Classes (OOP)
+- **Class basics**: a `class` as a blueprint — `constructor`, `this`, methods, creating instances with `new` (`155_Class.js`)
+- **Instances & objects**: each object gets its own properties, mutating one leaves the others alone (`156_Class_Object.js`)
+- **Inheritance**: `extends` to reuse a parent class, `super()` to call the parent constructor, overriding methods (`157_Class_Inheritance.js`)
+- **Real-world POM**: Playwright-style `LoginPage` → `DashboardPage` Page Object Model with a fake page object (`158_Class_Real.js`)
+- **Static & private**: `static` members on the class vs `#` private fields only reachable inside the class (`159_Class_Static_Private.js`)
+- **IQ exercise**: constructor order with `super()`, method override, `typeof` a class, class TDZ/hoisting (`160_Class_IQ.js`)
+- **Cheatsheet**: complete class/OOP reference — anatomy, the four pillars, `super`, `this` rules, static, private, getters/setters, POM, common mistakes (`Classes_Cheatsheet.md`)
 
 ### HackerRank
 - **Hello World**: HackerRank problem boilerplate with `processData()` function, stdin accumulation, and `process.stdin.on("end")` trigger (`Hello_World.js`)
